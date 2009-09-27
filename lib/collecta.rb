@@ -41,6 +41,12 @@ class Collecta
       case params[:format]
       when "hash"
         return JSON.parse(response)
+      when "atom"
+        parser = XML::Parser.string(response)
+        doc = parser.parse
+        doc.find('//feed/entry').each do |p|
+          puts p.inspect
+        end
       else
         return response
       end
@@ -76,5 +82,3 @@ class Collecta
   end
   
 end
-
-
