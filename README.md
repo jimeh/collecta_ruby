@@ -25,6 +25,6 @@ Available parameter options are `:rpp`, `:page`, `:since_id`, `:format`, `:callb
 
 ## Notes / Warning
 
-I classify this library unfinished, as I've spent less than 90 minutes working on it. More than 30 of those went to unsuccessfully getting `libxml-ruby` to parse Atom formatted XML. So for now it just returns the raw Atom/JSON response as a string.
+* I classify this library unfinished, as I've spent less than 90 minutes working on it. More than 30 of those went to unsuccessfully getting `libxml-ruby` to parse Atom formatted XML. So for now it just returns the raw Atom/JSON response as a string. If you're good with XML and XPath in Ruby, please fork and fix :)
 
-If you're good with XML and XPath in Ruby, please fork and fix :)
+* I have not had time to test if it works properly as a Rails plugin yet, so be brave.
