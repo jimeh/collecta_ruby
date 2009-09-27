@@ -19,7 +19,7 @@ Search for iPhone:
 
 Search with additional options/parameters:
 
-    Collecta.search("iPhone", :format => "json", :page => 2, :category => ["technology", "entertainment"], :exclude => ["politics"])
+    Collecta.search("iPhone", :format => "json", :page => 2, :category => ["technology", "games"], :exclude => ["politics"])
 
 Available parameter options are `:rpp`, `:page`, `:since_id`, `:format`, `:callback`, `:category`, and `:exclude`. The `:exclude` parameter simply excludes results from specified categories.
 
