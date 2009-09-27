@@ -37,13 +37,7 @@ class Collecta
     end
     request_url = self.build_url(params.clone)
     if request_url
-      response = Net::HTTP.get(URI.parse(request_url))
-      case params[:format]
-      when "hash"
-        return JSON.parse(response)
-      else
-        return response
-      end
+      return Net::HTTP.get(URI.parse(request_url))
     end
     return false
   end
