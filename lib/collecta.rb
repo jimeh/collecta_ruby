@@ -3,8 +3,7 @@ require "net/http"
 require "uri"
 require "cgi"
 require "json"
-require "yaml"
-# require "xml" # gem libxml-ruby >= 0.8.3
+require "xml"
 
 
 class Collecta
@@ -31,7 +30,7 @@ class Collecta
   def self.request(options = {})
     params = {}
     params[:api_key] = @@api_key if options[:api_key].nil?
-    params[:format]  = (!options[:format].nil?) ? options[:format] : "hash"
+    params[:format]  = (!options[:format].nil?) ? options[:format] : "atom"
     valid_params = [:q, :rpp, :page, :since_id, :callback, :category, :exclude]
     valid_params.each do |param|
       params[param] = options[param] if !options[param].nil?
@@ -77,8 +76,5 @@ class Collecta
   end
   
 end
-
-Collecta.api_key = "fb803590121d55976a9329031494d72b"
-puts Collecta.search("iphone", :format => "hash")
 
 
