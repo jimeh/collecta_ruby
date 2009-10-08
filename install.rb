@@ -1,5 +1,5 @@
-require "fileutils"
 require "rubygems"
+require "fileutils"
 
 dir = File.dirname(__FILE__)
 templates = File.join(dir, "templates")
