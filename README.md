@@ -7,19 +7,47 @@ A quick and rough Ruby/Rails library to query info from the [Collecta][1] API. C
 [1]: http://collecta.com/
 [2]: http://developer.collecta.com/
 
-## Setup
+## Installation
 
 ### Ruby on Rails Plugin
 
     script/plugin install git://github.com/jimeh/collecta_ruby.git
 
-And edit `config/collecta.yml` to supply your Collecta API key(s) for the each environment.
+### RubyGem
+
+The gem is hosted on [Gemcutter][1]. If you don't have Gemcutter setup already, I recommend you do so by following the instructions on their [documentation][2] page.
+
+[1]: http://gemcutter.org/
+[2]: http://gemcutter.org/pages/gem_docs
+
+Install with Gemcutter:
+
+    sudo gem install collecta_ruby
+
+If you would prefer to not get setup for Gemcutter, install with this command instead:
+
+    sudo gem install collecta_ruby --source http://gemcutter.org/
+
+## Setup
+
+### Ruby on Rails Plugin
+
+Edit `config/collecta.yml` to supply your Collecta API key(s) for the each environment.
+
+### Ruby on Rails with RubyGem
+
+Add the following to your `environment.rb`:
+
+    config.gem "collecta_ruby", :source => "http://gemcutter.org/"
+
+Then create a initializer called `collecta.rb` and specify your Collecta API key the same way as bellow for Plain Ruby.
 
 ### Plain Ruby
 
 Supply your API to the Collecta class:
 
     Collecta.set_key = "APIKEY"
+
 
 ## Usage
 
@@ -33,7 +61,7 @@ Search with additional options/parameters:
 
 Available parameter options are `:rpp`, `:page`, `:since_id`, `:format`, `:callback`, `:category`, and `:exclude`. The `:exclude` parameter simply excludes results from specified categories.
 
-## Notes / Planned Features
+## Notes / Warnings
 
 * Response data from Collecta is currently returned in it's raw JSON or Atom form. Parsing the JSON responses to a Hash fails cause it's more than 20 levels deep. And parsing the Atom data fails for some reason cause XPath doesn't like Atom, and I'm no XML expert. If you know better than me, please fork, fix, and pull request :)
 
