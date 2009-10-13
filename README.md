@@ -44,10 +44,9 @@ Then create a initializer called `collecta.rb` and specify your Collecta API key
 
 ### Plain Ruby
 
-Supply your API to the Collecta class:
+Supply your API key to the Collecta class:
 
     Collecta.api_key = "APIKEY"
-
 
 ## Usage
 
