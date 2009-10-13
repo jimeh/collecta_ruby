@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{collecta_ruby}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jim Myhrberg"]
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
+     "collecta_ruby.gemspec",
      "init.rb",
      "install.rb",
      "lib/collecta.rb",
