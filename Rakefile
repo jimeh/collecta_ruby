@@ -2,6 +2,21 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "collecta"
+    gemspec.summary = "Ruby library to query the Collecta.com API."
+    gemspec.description = "A quick and rough Ruby/Rails library to query info from the Collecta API."
+    gemspec.email = "contact@jimeh.me"
+    gemspec.homepage = "http://github.com/jimeh/collecta_ruby"
+    gemspec.authors = ["Jim Myhrberg"]
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+end
+
 desc 'Default: run unit tests.'
 task :default => :test
 
