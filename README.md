@@ -22,11 +22,11 @@ The gem is hosted on [Gemcutter][1]. If you don't have Gemcutter setup already, 
 
 Install with Gemcutter:
 
-    sudo gem install collecta_ruby
+    sudo gem install collecta
 
 If you would prefer to not get setup for Gemcutter, install with this command instead:
 
-    sudo gem install collecta_ruby --source http://gemcutter.org/
+    sudo gem install collecta --source http://gemcutter.org/
 
 ## Setup
 
@@ -38,7 +38,7 @@ Edit `config/collecta.yml` to supply your Collecta API key(s) for the each envir
 
 Add the following to your `environment.rb`:
 
-    config.gem "collecta_ruby", :source => "http://gemcutter.org/"
+    config.gem "collecta", :source => "http://gemcutter.org/"
 
 Then create a initializer called `collecta.rb` and specify your Collecta API key the same way as bellow for Plain Ruby.
 
