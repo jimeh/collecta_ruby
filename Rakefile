@@ -5,7 +5,7 @@ require 'rake/rdoctask'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "collecta_ruby"
+    gemspec.name = "collecta"
     gemspec.summary = "Ruby library to query the Collecta.com API."
     gemspec.description = "A quick and rough Ruby/Rails library to query info from the Collecta API."
     gemspec.email = "contact@jimeh.me"
